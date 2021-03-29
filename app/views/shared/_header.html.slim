@@ -1,0 +1,21 @@
+header
+  nav.navbar.navbar-expand-lg.navigation.navbar-light.bg-light
+    = link_to root_path, class: 'navbar-brand' do
+      = image_tag 'oden2.png'
+    button.navbar-toggler[data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto.main-nav.align-items-center
+        / li.nav-item
+        /   = link_to '鼻ほじ観察へ', '#', class: 'nav-link'
+        li.nav-item
+          = link_to 'みんなの鼻ほじ', '#', class: 'nav-link'
+        li.nav-item.dropdown.dropdown-slide
+          a#header-profile.nav-link[href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+            = image_tag 'koza', size: '40x40', class: 'rounded-circle mr15'
+          .dropdown-menu.dropdown-menu-right
+            .dropdown-item
+              | らんてっく たろう
+            .dropdown-divider
+            = link_to '自分の鼻ほじ', '#', class: 'dropdown-item'
+            = link_to 'ログアウト', '#', class: 'dropdown-item'
